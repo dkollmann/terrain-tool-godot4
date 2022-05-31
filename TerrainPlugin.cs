@@ -160,7 +160,7 @@ namespace TerrainEditor
                 var viewport = editorCamera.GetViewport() as SubViewport;
                 var viewport_container = viewport.GetParent() as SubViewportContainer;
 
-                var screen_pos = pos * viewport.Size / viewport_container.RectSize;
+                var screen_pos = pos * viewport.Size / viewport_container.Size;
 
                 var from = editorCamera.ProjectRayOrigin(screen_pos);
                 var dir = editorCamera.ProjectRayNormal(screen_pos);
@@ -505,7 +505,7 @@ namespace TerrainEditor
         private bool getPanelControlBoolean(string name)
         {
             var control = panelControls[name] as CheckBox;
-            return (bool)control.Pressed;
+            return control.ButtonPressed;
         }
 
         private TerrainEditorInfo getEditorApply()
@@ -657,7 +657,7 @@ namespace TerrainEditor
 
                 if (selectedTerrain.terrainDefaultTexture == null)
                 {
-                    var mat = GD.Load<StreamTexture2D>("res://addons/TerrainPlugin/TestTextures/texel.png");
+                    var mat = GD.Load<Texture2D>("res://addons/TerrainPlugin/TestTextures/texel.png");
                     selectedTerrain.terrainDefaultTexture = mat;
                 }
                 var typeImport = (HeightmapAlgo)heightmapAlgoControl.GetSelectedId();

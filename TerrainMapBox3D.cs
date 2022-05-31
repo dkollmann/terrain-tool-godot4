@@ -81,9 +81,8 @@ namespace TerrainEditor
 
             var filename = zoomLevel + "_" + x + "_" + y + ".png";
             var filePath = mapBoxCachePath + "/" + filename;
-            var fileCheck = new Godot.File();
 
-            if (fileCheck.FileExists(filePath))
+            if (Godot.File.FileExists(filePath))
             {
                 image = loadImageFromBox(filePath);
                 return Error.Ok;

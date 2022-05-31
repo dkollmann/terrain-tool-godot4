@@ -122,7 +122,7 @@ namespace TerrainEditor
             line_material.Transparency = BaseMaterial3D.TransparencyEnum.Alpha;
             line_material.AlbedoColor = new Color(0, 1, 1, 1);
 
-            line_material.AlbedoTexForceSrgb = true;
+            line_material.AlbedoTextureForceSrgb = true;
             line_material.VertexColorIsSrgb = true;
             line_material.VertexColorUseAsAlbedo = true;
 

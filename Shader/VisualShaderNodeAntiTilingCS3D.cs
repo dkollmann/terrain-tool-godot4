@@ -105,7 +105,7 @@ public partial class VisualShaderNodeAntiTilingCS3D : VisualShaderNodeCustom
 
 		return 0;
 	}
-	public override string _GetGlobalCode(int mode)
+	public override string _GetGlobalCode(Shader.Mode mode)
 	{
 		return @"float rand(vec2 input)
 				{
@@ -126,7 +126,7 @@ public partial class VisualShaderNodeAntiTilingCS3D : VisualShaderNodeCustom
 				}";
 	}
 
-	public override string _GetCode(string[] input_vars, Array output_vars, int mode, int type)
+	public override string _GetCode(Array input_vars, Array output_vars, Shader.Mode mode, VisualShader.Type type)
 	{
 		var heightStr = "";
 

@@ -14,7 +14,7 @@ namespace TerrainEditor
         public uint collisionLayer = 1;
         public uint collisionMask = 1;
         public bool collsionEnabled = true;
-        public StreamTexture2D terrainDefaultTexture;
+        public Texture2D terrainDefaultTexture;
 
         public RenderingServer.ShadowCastingSetting castShadow = RenderingServer.ShadowCastingSetting.On;
         public GIMode giMode = GIMode.Disabled;
